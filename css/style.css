@@ -1,0 +1,128 @@
+/* Box-sizing pour inclure bordures et paddings dans les calculs de largeur */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%; /* S'assure que le body prend toute la hauteur de la page */
+  margin: 0; /* Supprime les marges par défaut */
+  overflow: hidden; /* Masque les barres de défilement */
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  text-align: center;
+  background-color: #f4e1c1;
+  color: #5a3e2b;
+  background-image: url(/background/background_paw.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  overflow: auto; /* Permet le défilement sans afficher la scrollbar */
+}
+
+.card {
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 15px;
+  border-radius: 15px;
+  background: #fff8e7;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+  border: 2px solid #c19a6b;
+}
+
+.cardTitle {
+  width: 90%;
+  max-width: 300px;
+  margin: 20px auto;
+  padding: 5px;
+  border-radius: 15px;
+  background: #fff8e7;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+  border: 2px solid #c19a6b;
+}
+
+#messages {
+  height: 300px;
+  overflow-y: auto;
+  text-align: left;
+  padding: 10px;
+  border-bottom: 2px solid #c19a6b;
+  margin-bottom: 10px;
+}
+
+.message {
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 10px;
+  max-width: 80%;
+  display: flex;
+  align-items: center;
+}
+
+.user {
+  background-color: #f5deb3;
+  text-align: right;
+  margin-left: auto;
+}
+
+.bot {
+  background-color: #d2b48c;
+  text-align: left;
+  margin-right: auto;
+}
+
+.bot::before {
+  content: "🐱";
+  margin-right: 10px;
+  font-size: 1.5em;
+}
+
+input,
+button,
+select {
+  width: calc(100% - 20px); /* Utiliser le calc() pour ajuster la largeur */
+  padding: 10px;
+  margin-top: 10px;
+  border: 2px solid #c19a6b;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button {
+  background-color: #c19a6b;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #a0785a;
+}
+
+.dropdown {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .cardTitle,
+  .card {
+    width: 95%;
+    padding: 10px;
+  }
+
+  #messages {
+    height: 250px;
+  }
+
+  input,
+  button,
+  select {
+    font-size: 14px;
+  }
+}

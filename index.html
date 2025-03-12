@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat-bot</title>
+    <link rel="icon" type="image/x-icon" href="favicon/chat.png" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="cardTitle">
+      <h1>Chat-bot 🐱</h1>
+    </div>
+
+    <!-- Carte pour le chat -->
+    <div class="card" id="chatbox">
+      <div id="messages"></div>
+      <input
+        type="text"
+        id="userInput"
+        placeholder="Pose-moi une question sur les chats..."
+        onkeypress="handleKeyPress(event)"
+      />
+      <button onclick="sendMessage()">Envoyer</button>
+    </div>
+
+    <!-- Carte pour les menus déroulants -->
+    <div class="card">
+      <div id="suggestions">
+        <select id="questionSelect" onchange="fillInputFromSelect()">
+          <option value="">Choisissez une question...</option>
+        </select>
+      </div>
+
+      <div class="dropdown">
+        <select id="politenessSelect" onchange="applyPoliteness()">
+          <option value="">Choisissez une formule de politesse...</option>
+          <option value="Bonjour 👋">Bonjour 👋</option>
+          <option value="Comment ça va ? 😊">Comment ça va ? 😊</option>
+          <option value="Merci pour ta réponse ! 😊">
+            Merci pour ta réponse ! 😊
+          </option>
+          <option value="C'est vraiment gentil, merci ! 🐱">
+            C'est vraiment gentil, merci ! 🐱
+          </option>
+          <option value="Je suis content d'en savoir plus ! 😺">
+            Je suis content d'en savoir plus ! 😺
+          </option>
+          <option value="Au revoir 👋">Au revoir 👋</option>
+        </select>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
