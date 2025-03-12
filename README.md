@@ -1,4 +1,4 @@
-<h1 align="center">Chat-bot 🐱</h1>
+<h1 align="center">Chat-bot</h1>
 <div align="center">
   <img src="/favicon/chat.png" alt="Logo" width="80" height="80">
 </div>
